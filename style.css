@@ -192,35 +192,6 @@ nav a:hover::after{
     }
 }
 
-/* SCROLL */
-
-.scroll{
-    position:absolute;
-    left:50%;
-    bottom:30px;
-
-    transform:translateX(-50%);
-
-    text-align:center;
-}
-
-.mouse{
-    width:28px;
-    height:50px;
-
-    border:2px solid white;
-
-    border-radius:20px;
-
-    margin:auto;
-}
-
-.scroll p{
-    margin-top:12px;
-    font-size:12px;
-    letter-spacing:4px;
-}
-
 /* SECTION */
 
 .zodiac-section{

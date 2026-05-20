@@ -176,7 +176,7 @@ nav a:hover::after{
 }
 
 .hero-right img{
-    width:300px;
+    width:350px;
     opacity:0.85;
 
     animation:rotate 35s linear infinite;
@@ -321,7 +321,7 @@ nav a:hover::after{
     }
 
     .hero-right img{
-        width:300px;
+        width:350px;
         margin-top:50px;
     }
 

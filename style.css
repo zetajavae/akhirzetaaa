@@ -339,3 +339,74 @@ nav a:hover::after{
     }
 
 }
+.zodiac-section{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+
+    font-size:60px;
+
+    margin-bottom:70px;
+
+    color:#f5d57a;
+
+    font-family:'Cormorant Garamond', serif;
+}
+
+.zodiac-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+}
+
+.zodiac-card{
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+}
+
+.zodiac-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.25);
+
+    border-color:#f5d57a;
+}
+
+.zodiac-card img{
+    width:120px;
+
+    margin-bottom:20px;
+}
+
+.zodiac-card h3{
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    color:#f5d57a;
+
+    font-family:'Cormorant Garamond', serif;
+}
+
+.zodiac-card p{
+    color:#ddd;
+
+    line-height:1.8;
+}

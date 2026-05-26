@@ -8,7 +8,7 @@
 
   <title>MyZodiac</title>
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -37,6 +37,7 @@
       position:fixed;
       width:100%;
       height:100%;
+
       background:
       linear-gradient(
       rgba(2,3,20,0.75),
@@ -54,6 +55,7 @@
       position:fixed;
       width:100%;
       height:100%;
+
       background:
       radial-gradient(circle at top,
       rgba(109,40,217,0.25),
@@ -62,7 +64,7 @@
       z-index:-1;
     }
 
-    /* HEADER */
+    /* NAVBAR */
 
     header{
       width:100%;
@@ -92,18 +94,17 @@
 
     nav{
       display:flex;
-      gap:45px;
+      gap:40px;
     }
 
     nav a{
       color:white;
       text-decoration:none;
       font-size:15px;
-      position:relative;
       transition:0.3s;
+      position:relative;
     }
 
-    nav a.active,
     nav a:hover{
       color:#f5d57a;
     }
@@ -112,21 +113,18 @@
       content:'';
       position:absolute;
       left:0;
-      bottom:-10px;
+      bottom:-8px;
+
       width:0%;
       height:1px;
+
       background:#f5d57a;
+
       transition:0.4s;
     }
 
     nav a:hover::after{
       width:100%;
-    }
-
-    .menu{
-      color:#f5d57a;
-      font-size:2rem;
-      display:none;
     }
 
     /* HERO */
@@ -148,37 +146,34 @@
     }
 
     .hero-left span{
-      letter-spacing:4px;
       color:#f5d57a;
+      letter-spacing:4px;
       font-size:14px;
     }
 
     .hero-left h1{
       font-size:5.5rem;
-      font-family:'Cinzel',serif;
-      font-weight:700;
       line-height:1.1;
 
       margin-top:20px;
+
+      font-family:'Cinzel',serif;
     }
 
     .hero-left h1 span{
-      font-size:5.5rem;
-
       background:linear-gradient(to right,#f5d57a,#ff4ecd,#8b5cf6);
+
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
 
     .hero-left p{
       margin-top:30px;
-      color:#d8d8d8;
+      color:#ddd;
       line-height:2;
-      max-width:550px;
       font-size:17px;
+      max-width:550px;
     }
-
-    /* BUTTON */
 
     .btn{
       display:inline-block;
@@ -189,12 +184,11 @@
 
       border-radius:15px;
 
-      background:linear-gradient(to right,#f5d57a,#ff4ecd);
+      background:
+      linear-gradient(to right,#f5d57a,#ff4ecd);
 
       color:black;
-
       text-decoration:none;
-
       font-weight:700;
 
       transition:0.4s;
@@ -206,20 +200,20 @@
 
     /* HERO RIGHT */
 
-    .hero-right{
-      position:relative;
-    }
-
     .hero-right img{
-      width:420px;
-      opacity:0.9;
+      width:430px;
 
       animation:rotate 35s linear infinite;
 
-      filter:drop-shadow(0 0 40px rgba(255,255,255,0.2));
+      filter:
+      drop-shadow(0 0 25px rgba(245,213,122,0.7))
+      drop-shadow(0 0 70px rgba(255,0,200,0.25));
+
+      border-radius:50%;
     }
 
     @keyframes rotate{
+
       from{
         transform:rotate(0deg);
       }
@@ -227,27 +221,27 @@
       to{
         transform:rotate(360deg);
       }
+
     }
 
     /* SECTION */
 
-    .zodiac-section{
+    section{
       padding:120px 8%;
     }
 
     .section-title{
       text-align:center;
-
-      font-size:60px;
-
       margin-bottom:70px;
+
+      font-size:55px;
 
       color:#f5d57a;
 
-      font-family:'Cinzel', serif;
+      font-family:'Cinzel',serif;
     }
 
-    /* CARDS */
+    /* ZODIAC */
 
     .zodiac-grid{
       display:grid;
@@ -259,7 +253,7 @@
     }
 
     .zodiac-card{
-      background:rgba(255,255,255,0.05);
+      background:rgba(10,10,25,0.75);
 
       border:1px solid rgba(255,255,255,0.1);
 
@@ -271,51 +265,38 @@
 
       backdrop-filter:blur(12px);
 
-      transition:.4s;
+      transition:0.4s;
     }
 
     .zodiac-card:hover{
       transform:translateY(-10px);
 
-      box-shadow:
-      0 0 30px rgba(212,175,55,.25);
-
       border-color:#f5d57a;
+
+      box-shadow:
+      0 0 40px rgba(255,0,200,0.2);
     }
 
     .zodiac-card img{
       width:120px;
-
       margin-bottom:20px;
-
-      transition:0.4s;
-    }
-
-    .zodiac-card:hover img{
-      transform:scale(1.1);
     }
 
     .zodiac-card h3{
       font-size:32px;
-
       margin-bottom:15px;
 
       color:#f5d57a;
 
-      font-family:'Cinzel', serif;
+      font-family:'Cinzel',serif;
     }
 
     .zodiac-card p{
       color:#ddd;
-
       line-height:1.8;
     }
 
     /* ABOUT */
-
-    .about{
-      padding:120px 8%;
-    }
 
     .about-content{
       display:flex;
@@ -335,23 +316,21 @@
     }
 
     .about-text h3{
-      font-size:50px;
-      margin-bottom:25px;
-      font-family:'Cinzel', serif;
+      font-size:45px;
+      margin-bottom:20px;
+
       color:#f5d57a;
+
+      font-family:'Cinzel',serif;
     }
 
     .about-text p{
       color:#ddd;
       line-height:2;
-      font-size:18px;
+      font-size:17px;
     }
 
     /* GALLERY */
-
-    .gallery{
-      padding:120px 8%;
-    }
 
     .gallery-grid{
       display:grid;
@@ -363,7 +342,9 @@
       width:100%;
       height:350px;
       object-fit:cover;
+
       border-radius:25px;
+
       transition:0.4s;
     }
 
@@ -371,11 +352,7 @@
       transform:scale(1.03);
     }
 
-    /* VIDEO */
-
-    .video-section{
-      padding:120px 8%;
-    }
+    /* IFRAME */
 
     iframe{
       width:100%;
@@ -387,17 +364,24 @@
 
     footer{
       padding:70px 30px;
+
       text-align:center;
+
       border-top:1px solid rgba(255,255,255,0.1);
-      color:#999;
+
       background:#04040f;
+
+      color:#aaa;
     }
 
     footer h3{
       color:#f5d57a;
+
       margin-bottom:20px;
+
       font-size:35px;
-      font-family:'Cinzel', serif;
+
+      font-family:'Cinzel',serif;
     }
 
     footer p{
@@ -409,9 +393,12 @@
 
     @media(max-width:1000px){
 
+      nav{
+        display:none;
+      }
+
       .hero{
         flex-direction:column;
-        justify-content:center;
         text-align:center;
       }
 
@@ -419,21 +406,9 @@
         font-size:3.5rem;
       }
 
-      .hero-left h1 span{
-        font-size:3.5rem;
-      }
-
       .hero-right img{
-        width:320px;
-        margin-top:30px;
-      }
-
-      nav{
-        display:none;
-      }
-
-      .menu{
-        display:block;
+        width:300px;
+        margin-top:40px;
       }
 
       .section-title{
@@ -452,7 +427,7 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVBAR -->
 
   <header>
 
@@ -461,16 +436,13 @@
     </div>
 
     <nav>
-      <a href="#" class="active">Beranda</a>
+      <a href="#">Beranda</a>
       <a href="#zodiak">Zodiak</a>
       <a href="#tentang">Tentang</a>
       <a href="#gallery">Galeri</a>
-      <a href="#kontak">Kontak</a>
+      <a href="#maps">Lokasi</a>
+      <a href="login/index.html">Login</a>
     </nav>
-
-    <div class="menu">
-      ☰
-    </div>
 
   </header>
 
@@ -483,14 +455,14 @@
       <span>WELCOME TO THE UNIVERSE</span>
 
       <h1>
-        Selamat Datang di
+        Dunia
         <br>
-        <span>Dunia Zodiak ✧</span>
+        <span>Zodiak ✧</span>
       </h1>
 
       <p>
-        Temukan kepribadian, energi, dan misteri dari setiap tanda zodiak.
-        Jelajahi semesta astrologi dengan nuansa galaksi yang magis dan penuh bintang.
+        Jelajahi kepribadian, energi, dan misteri dari setiap zodiak
+        dengan nuansa galaksi aesthetic yang modern dan elegan.
       </p>
 
       <a href="#zodiak" class="btn">
@@ -501,7 +473,8 @@
 
     <div class="hero-right">
 
-      <img src="https://cdn-icons-png.flaticon.com/512/3658/3658773.png">
+      <!-- GANTI DENGAN wheel.png -->
+      <img src="wheel.png">
 
     </div>
 
@@ -509,7 +482,7 @@
 
   <!-- ZODIAK -->
 
-  <section id="zodiak" class="zodiac-section">
+  <section id="zodiak">
 
     <h2 class="section-title">
       12 Zodiak ✨
@@ -520,73 +493,37 @@
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png">
         <h3>Aries</h3>
-        <p>Aries dikenal berani, penuh energi, dan memiliki jiwa pemimpin alami.</p>
+        <p>Berani, energik, dan memiliki jiwa pemimpin alami.</p>
       </div>
 
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188984.png">
         <h3>Taurus</h3>
-        <p>Taurus tenang, setia, dan menyukai kenyamanan serta kemewahan.</p>
+        <p>Tenang, setia, dan menyukai kenyamanan.</p>
       </div>
 
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188982.png">
         <h3>Gemini</h3>
-        <p>Gemini cerdas, komunikatif, dan penuh rasa ingin tahu.</p>
+        <p>Cerdas, komunikatif, dan penuh rasa ingin tahu.</p>
       </div>
 
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188989.png">
         <h3>Cancer</h3>
-        <p>Cancer hangat, emosional, dan sangat peduli keluarga.</p>
+        <p>Hangat, emosional, dan peduli keluarga.</p>
       </div>
 
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188986.png">
         <h3>Leo</h3>
-        <p>Leo percaya diri, karismatik, dan suka menjadi pusat perhatian.</p>
+        <p>Percaya diri dan suka menjadi pusat perhatian.</p>
       </div>
 
       <div class="zodiac-card">
         <img src="https://cdn-icons-png.flaticon.com/512/188/188985.png">
         <h3>Virgo</h3>
-        <p>Virgo detail, perfeksionis, dan memiliki pikiran analitis.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188981.png">
-        <h3>Libra</h3>
-        <p>Libra menyukai keseimbangan, kedamaian, dan keindahan.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188990.png">
-        <h3>Scorpio</h3>
-        <p>Scorpio misterius, intens, dan memiliki intuisi kuat.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188988.png">
-        <h3>Sagittarius</h3>
-        <p>Sagittarius suka petualangan, kebebasan, dan optimisme.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188980.png">
-        <h3>Capricorn</h3>
-        <p>Capricorn disiplin, pekerja keras, dan sangat ambisius.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188983.png">
-        <h3>Aquarius</h3>
-        <p>Aquarius unik, inovatif, dan memiliki pemikiran visioner.</p>
-      </div>
-
-      <div class="zodiac-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/188/188979.png">
-        <h3>Pisces</h3>
-        <p>Pisces sensitif, artistik, dan penuh empati.</p>
+        <p>Perfeksionis dan memiliki pikiran analitis.</p>
       </div>
 
     </div>
@@ -595,7 +532,7 @@
 
   <!-- ABOUT -->
 
-  <section class="about" id="tentang">
+  <section id="tentang">
 
     <h2 class="section-title">
       Tentang Zodiak
@@ -610,9 +547,9 @@
         <h3>Galaxy Astrology Experience</h3>
 
         <p>
-          Zodiak merupakan simbol astrologi yang dipercaya dapat menggambarkan
-          kepribadian, karakter, dan energi seseorang berdasarkan tanggal lahir.
-          Setiap zodiak memiliki elemen dan sifat unik yang membuatnya berbeda satu sama lain.
+          Zodiak dipercaya dapat menggambarkan karakter dan energi seseorang
+          berdasarkan tanggal lahir. Setiap simbol memiliki elemen unik
+          yang membuatnya berbeda satu sama lain.
         </p>
 
       </div>
@@ -623,7 +560,7 @@
 
   <!-- GALLERY -->
 
-  <section class="gallery" id="gallery">
+  <section id="gallery">
 
     <h2 class="section-title">
       Galeri Semesta
@@ -643,7 +580,7 @@
 
   <!-- VIDEO -->
 
-  <section class="video-section">
+  <section>
 
     <h2 class="section-title">
       Pengalaman Galaksi
@@ -658,15 +595,32 @@
 
   </section>
 
+  <!-- MAPS -->
+
+  <section id="maps">
+
+    <h2 class="section-title">
+      Lokasi
+    </h2>
+
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.108829700447!2d110.36185207432229!3d-7.778284077169781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59fa08ee1ad5%3A0x1cf83f630f27d8a6!2sFAVOR%20Heritage!5e0!3m2!1sen!2sid!4v1779720935710!5m2!1sen!2sid"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+    </iframe>
+
+  </section>
+
   <!-- FOOTER -->
 
-  <footer id="kontak">
+  <footer>
 
     <h3>✧ MyZodiac ✧</h3>
 
     <p>
-      Jelajahi semesta astrologi dan temukan
-      karakter unik dari setiap zodiak.
+      Jelajahi misteri semesta dan temukan energi unik dari setiap zodiak.
     </p>
 
     <br>
@@ -675,10 +629,14 @@
       Instagram : @myzodiac
     </p>
 
+    <p>
+      TikTok : @myzodiac
+    </p>
+
     <br>
 
     <p>
-      © 2026 MyZodiac
+      © 2026 MyZodiac • Galaxy Astrology Experience
     </p>
 
   </footer>

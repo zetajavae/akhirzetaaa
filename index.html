@@ -79,8 +79,8 @@
       left:0;
       z-index:999;
 
-      background:rgba(0,0,0,0.4);
-      backdrop-filter:blur(12px);
+      background:rgba(0,0,0,0.45);
+      backdrop-filter:blur(14px);
 
       border-bottom:1px solid rgba(255,255,255,0.1);
     }
@@ -94,7 +94,8 @@
 
     nav{
       display:flex;
-      gap:40px;
+      gap:35px;
+      align-items:center;
     }
 
     nav a{
@@ -127,6 +128,22 @@
       width:100%;
     }
 
+    .login-btn{
+      padding:12px 28px;
+      border-radius:14px;
+
+      background:
+      linear-gradient(to right,#f5d57a,#ff4ecd);
+
+      color:black;
+      font-weight:700;
+    }
+
+    .login-btn:hover{
+      color:black;
+      transform:scale(1.05);
+    }
+
     /* HERO */
 
     .hero{
@@ -137,7 +154,7 @@
       align-items:center;
 
       padding:140px 8% 80px;
-      gap:50px;
+      gap:60px;
       flex-wrap:wrap;
     }
 
@@ -145,9 +162,9 @@
       max-width:650px;
     }
 
-    .hero-left span{
+    .hero-left .welcome{
       color:#f5d57a;
-      letter-spacing:4px;
+      letter-spacing:5px;
       font-size:14px;
     }
 
@@ -155,9 +172,10 @@
       font-size:5.5rem;
       line-height:1.1;
 
-      margin-top:20px;
+      margin-top:25px;
 
       font-family:'Cinzel',serif;
+      font-weight:700;
     }
 
     .hero-left h1 span{
@@ -180,9 +198,9 @@
 
       margin-top:40px;
 
-      padding:18px 40px;
+      padding:18px 42px;
 
-      border-radius:15px;
+      border-radius:16px;
 
       background:
       linear-gradient(to right,#f5d57a,#ff4ecd);
@@ -200,16 +218,22 @@
 
     /* HERO RIGHT */
 
+    .hero-right{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
     .hero-right img{
-      width:430px;
+      width:420px;
+      max-width:100%;
 
       animation:rotate 35s linear infinite;
 
       filter:
-      drop-shadow(0 0 25px rgba(245,213,122,0.7))
+      drop-shadow(0 0 30px rgba(245,213,122,0.7))
       drop-shadow(0 0 70px rgba(255,0,200,0.25));
-
-      border-radius:50%;
     }
 
     @keyframes rotate{
@@ -241,7 +265,7 @@
       font-family:'Cinzel',serif;
     }
 
-    /* ZODIAC */
+    /* ZODIAK */
 
     .zodiac-grid{
       display:grid;
@@ -280,6 +304,11 @@
     .zodiac-card img{
       width:120px;
       margin-bottom:20px;
+      transition:0.4s;
+    }
+
+    .zodiac-card:hover img{
+      transform:scale(1.1);
     }
 
     .zodiac-card h3{
@@ -352,12 +381,99 @@
       transform:scale(1.03);
     }
 
-    /* IFRAME */
+    /* VIDEO & MAP */
 
     iframe{
       width:100%;
       border:none;
       border-radius:25px;
+    }
+
+    /* LOGIN SECTION */
+
+    .login-section{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .login-box{
+      width:100%;
+      max-width:500px;
+
+      background:rgba(10,10,25,0.75);
+
+      border:1px solid rgba(255,255,255,0.1);
+
+      border-radius:30px;
+
+      padding:50px;
+
+      backdrop-filter:blur(12px);
+    }
+
+    .login-box h2{
+      text-align:center;
+      margin-bottom:30px;
+
+      color:#f5d57a;
+
+      font-family:'Cinzel',serif;
+      font-size:42px;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:18px 20px;
+
+      border:none;
+      outline:none;
+
+      border-radius:15px;
+
+      background:rgba(255,255,255,0.08);
+
+      color:white;
+      font-size:15px;
+    }
+
+    .submit-btn{
+      width:100%;
+
+      padding:18px;
+
+      border:none;
+      border-radius:15px;
+
+      background:
+      linear-gradient(to right,#f5d57a,#ff4ecd);
+
+      color:black;
+      font-weight:700;
+      font-size:16px;
+
+      cursor:pointer;
+
+      transition:0.4s;
+    }
+
+    .submit-btn:hover{
+      transform:scale(1.03);
+    }
+
+    .register-text{
+      text-align:center;
+      margin-top:20px;
+      color:#ccc;
+    }
+
+    .register-text a{
+      color:#f5d57a;
+      text-decoration:none;
     }
 
     /* FOOTER */
@@ -403,12 +519,12 @@
       }
 
       .hero-left h1{
-        font-size:3.5rem;
+        font-size:3.7rem;
       }
 
       .hero-right img{
         width:300px;
-        margin-top:40px;
+        margin-top:20px;
       }
 
       .section-title{
@@ -417,6 +533,10 @@
 
       .about-text h3{
         font-size:35px;
+      }
+
+      .login-box{
+        padding:35px;
       }
 
     }
@@ -441,7 +561,7 @@
       <a href="#tentang">Tentang</a>
       <a href="#gallery">Galeri</a>
       <a href="#maps">Lokasi</a>
-      <a href="login/index.html">Login</a>
+      <a href="#login" class="login-btn">Login</a>
     </nav>
 
   </header>
@@ -452,12 +572,14 @@
 
     <div class="hero-left">
 
-      <span>WELCOME TO THE UNIVERSE</span>
+      <div class="welcome">
+        WELCOME TO THE UNIVERSE
+      </div>
 
       <h1>
-        Dunia
+        Selamat Datang
         <br>
-        <span>Zodiak ✧</span>
+        di <span>Dunia Zodiak ✧</span>
       </h1>
 
       <p>
@@ -473,7 +595,6 @@
 
     <div class="hero-right">
 
-      <!-- GANTI DENGAN wheel.png -->
       <img src="wheel.png">
 
     </div>
@@ -597,28 +718,51 @@
 
   <!-- MAPS -->
 
- <section class="maps" id="maps">
+  <section id="maps">
 
-<h2 class="section-title">
-Lokasi Kami
-</h2>
+    <h2 class="section-title">
+      Lokasi Kami
+    </h2>
 
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9104349003233!2d110.40450787432258!3d-7.799306877416091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59e26c78f995%3A0x20581c22dbf99536!2sPerpustakaan%20Grhatama%20Pustaka%20(Balai%20Layanan%20Perpustakaan%20DPAD%20DIY)!5e0!3m2!1sen!2sid!4v1779759060312!5m2!1sen!2sid"
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9104349003233!2d110.40450787432258!3d-7.799306877416091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59e26c78f995%3A0x20581c22dbf99536!2sPerpustakaan%20Grhatama%20Pustaka%20(Balai%20Layanan%20Perpustakaan%20DPAD%20DIY)!5e0!3m2!1sen!2sid!4v1779759060312!5m2!1sen!2sid"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 
-height="450"
+  </section>
 
-style="border:0; width:100%; border-radius:25px;"
+  <!-- LOGIN -->
 
-allowfullscreen=""
+  <section class="login-section" id="login">
 
-loading="lazy"
+    <div class="login-box">
 
-referrerpolicy="no-referrer-when-downgrade">
+      <h2>Login</h2>
 
-</iframe>
+      <div class="input-box">
+        <input type="text" placeholder="Username">
+      </div>
 
-</section>
+      <div class="input-box">
+        <input type="password" placeholder="Password">
+      </div>
+
+      <button class="submit-btn">
+        Masuk
+      </button>
+
+      <div class="register-text">
+        Belum punya akun?
+        <a href="#">Daftar Sekarang</a>
+      </div>
+
+    </div>
+
+  </section>
 
   <!-- FOOTER -->
 
